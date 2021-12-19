@@ -1,7 +1,12 @@
 import { ref, computed } from 'Vue'
+import { useStore } from 'vuex'
+
+// store
+const store = useStore()
 
 // data
-let counter = ref(0)
+// let counter = ref(0)
+let counter = store.state.counter.counter
 
 // computed
 let counterPretty = computed(() => {
